@@ -1,0 +1,45 @@
+**The Prompt:**
+
+In this task, you are tasked with creating a concise yet comprehensive quest story using elements inspired by the Harmon story circle, structured in JSON format. The story must integrate elements from the provided chat conversation and develop a branching narrative with limited stages, ensuring depth and complexity through a sequential, tree-like path structure.
+
+**Story Creation Directives:**
+
+1. **Story Structure:**
+   - Limit the story to five distinct stages, integrating elements of the Harmon story circle into fused segments: **(1) Ordinary World & Catalyst** — introduce the protagonist and incite their journey; **(2) Crossing Threshold** — describe the transition into new challenges; **(3) Trials and Discoveries** — detail central quest encounters and revelations; **(4) Climax and Resolution** — focus on decisive actions and conflicts; **(5) Transformation & Return** — depict changes and completed arcs.
+
+2. **Branching Path Structure:**
+   - Stage 1 must be singular, serving as the initial context and incitement for the story. From Stage 1, create varied branches for subsequent stages, forming a tree-like narrative graph.
+   - Each subsequent stage can have multiple branches, with each branch serving as a parent to multiple child branches in the following stage, reflecting diverse scenarios and decisions.
+
+3. **Sequential Branching:**
+   - Ensure that the narrative progression moves sequentially from one stage to the next, with each parent branch connecting to multiple child branches in the subsequent stage. For example, Stage 1 connects to multiple Stage 2 branches (e.g., 2a, 2b), which then connect to their own variations in Stage 3 and so on for the following stages.
+
+4. **Descriptive Prompts:**
+   - Craft prompts with vivid, sensory-rich descriptions to immerse readers in the narrative. Keep prompts concise, limiting each to eight sentences to deliver impactful storytelling.
+
+5. **Dynamic Conditions with Character State:**
+   - Utilize character state variables to influence branch conditions, enabling a dynamic flow through the story based on factors like items or emotional statuses. Conditions should be complex to enhance interactive storytelling.
+
+6. **Character State Blueprint:**
+   - Establish initial character state variables that evolve throughout the story (e.g., "inventory": {"sword": null}, "trust": 0). These should be integral to the narrative, guiding choices and story paths.
+
+**JSON Format Instructions:**
+
+- **Structure Overview:** Structure the JSON with a "stories" key containing story objects, each with fields: "name," "story_type," "streaming_prompt," "attributes_prompt," "character_state_blueprint," and "branches."
+
+- **Story Fields:**
+  - **name:** A string representing the story title.
+  - **story_type:** A string for the story genre, e.g., "quest."
+  - **streaming_prompt:** A detailed introduction setting the scene and introducing characters, constrained to eight sentences.
+  - **attributes_prompt:** Guidance for analyzing character states and suggesting interactions.
+  - **character_state_blueprint:** Defines initial character state variables, allowing for changes during the narrative.
+
+- **Branch Fields:**
+  - **title:** Denotes the chapter or segment.
+  - **chapter:** An integer unique to each story stage.
+  - **code:** Unique identifier for each branch.
+  - **prompt:** An eight-sentence narrative segment containing key events and sensory details.
+  - **condition:** Describes requirements, potentially complex, necessary to activate this branch.
+  - **children:** Nested branches array, ensuring a sequential progression from parent to child stages.
+
+Utilize the chat conversation effectively to guide character arcs and decisions, culminating in a detailed quest narrative realized through structured JSON with strategic storytelling flow through sequential, diverse branches originating from a singular starting point.

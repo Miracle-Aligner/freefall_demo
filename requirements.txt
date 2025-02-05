@@ -1,0 +1,8 @@
+pydantic
+typing
+pathlib
+asyncio
+json
+re
+openai
+pydantic_settings
